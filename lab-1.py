@@ -15,15 +15,8 @@ def home():
 
 
 def search(id):
-    is_found = False
-    target_student = None
-    for student in students:
-        if student['id'] == id:
-            is_found = True
-            target_student = student
-
-    return render_template("search.html", is_found=is_found, target_student=target_student)
-
+    def search(id):
+    return render_template('search.html', students=students, id=id)
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
